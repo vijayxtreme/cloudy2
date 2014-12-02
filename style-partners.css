@@ -1,0 +1,195 @@
+/* ===================================================
+CLOUDY 2 PARTNERS PAGE
+======================================================*/
+/* BACKGROUNDS + PAGE STRUCTURE */
+
+body {
+	background: #000;
+}
+p {
+	line-height: 16px;
+	font-size:12px;
+	font-family: Arial;
+}
+a {
+	color: #274589;
+	text-decoration: none;
+}
+.bgcenter {
+	background-position: center !important;
+	
+}
+
+#wrapper_parent {
+	background: transparent url('images/partners-background.jpg') no-repeat center top;
+	-webkit-background-size: 1400px 2350px; /* image size, NOT container size */
+	/* Subtract 241px from left */
+}
+#wrapper {
+	position: relative;
+	height: 2350px;
+	width: 922px;
+	margin: 0 auto !important;
+}
+#bg_one {
+	background: url('images/partners-bg-1.jpg');
+	width: 922px;
+	height:814px;
+}
+#bg_two {
+	background: url('images/partners-bg-2.jpg');
+	width: 922px;
+	height:814px;
+}
+#bg_three {
+	background: url('images/partners-bg-3.jpg');
+	width: 922px;
+	height:722px;
+}
+
+
+
+/* DATE-CODE */
+#buy-sell {
+	position: absolute;
+	top:165px;
+	left:175px;
+	width: 575px;
+	height:60px;
+	background: url('images/buy-sell-3.png');
+	text-indent: -9999px;
+}
+
+
+/* CONTENT */
+
+#spot-shot {
+	position: absolute;
+	top:442px;
+	left:289px;
+	background: url('images/spot-shot.png');
+	width: 593px;
+	height:466px;
+	z-index: 2;
+	
+}
+#spot-shot p {
+	position: absolute;
+	top:100px;
+	left:170px;
+	width: 390px;
+	z-index: 3;
+}
+
+#carls-jr {
+	position: absolute;
+	top:917px;
+	left:289px;
+	background: url('images/carls-jr.png');
+	width: 593px;
+	height:316px;
+	z-index: 2;
+}
+#carls-jr p {
+	position: absolute;
+	top:47px;
+	left:170px;
+	width: 390px;
+	z-index: 3;
+}
+#feed-america {
+	position: absolute;
+	top:1243px;
+	left:289px;
+	background: url('images/feed-america.png');
+	width: 593px;
+	height:227px;
+	z-index: 2;
+}
+#feed-america p {
+	position: absolute;
+	top:47px;
+	left:170px;
+	width: 390px;
+	z-index: 3;
+}
+#shutterfly {
+	position: absolute;
+	top:1481px;
+	left:289px;
+	background: url('images/shutterfly.png');
+	width: 593px;
+	height:220px;
+	z-index: 2;
+}
+#shutterfly p {
+	position: absolute;
+	top:47px;
+	left:170px;
+	width: 390px;
+	z-index: 3;
+}
+#chuck-cheese {
+	position: absolute;
+	top:1710px;
+	left:289px;
+	background: url('images/chuck-cheese.png');
+	width: 593px;
+	height:203px;
+	z-index: 2;
+}
+#chuck-cheese p {
+	position: absolute;
+	top:47px;
+	left:170px;
+	width: 390px;
+	z-index: 3;
+}
+#white-castle {
+	position: absolute;
+	top:1923px;
+	left:289px;
+	background: url('images/white-castle.png');
+	width: 593px;
+	height:205px;
+	z-index: 2;
+}
+#white-castle p {
+	position: absolute;
+	top:47px;
+	left:170px;
+	width: 390px;
+	z-index: 3;
+}
+
+.more-info {
+	cursor: pointer;
+	position: absolute;
+	top:847px;
+	left:460px;
+	background: url('images/more-info.png');
+	width: 280px;
+	height:40px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+.more-info:hover {
+	background-position-y: -40px;
+}
+
+#footer {
+	position: absolute;
+	top:2298px;
+	left:88px;
+	width: 780px;
+	z-index: 4;
+	color: #ccc;
+	text-align: center;
+	line-height: 1.5;
+}
+#footer a {
+	color: #ccc;
+	text-decoration: underline;
+}
+
+

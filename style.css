@@ -1,0 +1,779 @@
+/* ===================================================
+CLOUDY 2 
+======================================================*/
+/* BACKGROUNDS + PAGE STRUCTURE */
+
+body {
+/* 	background: url('images/background-all.jpg') no-repeat center 100px transparent; */
+/*
+	background-image: url('images/background-all2.jpg');
+	background-repeat: no-repeat;
+	background-position: center 100px;
+	background-size: 1520px 4350px;
+*/
+	font: normal 12px "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	background: #000;
+/* 	margin: 0; */
+	margin: 100px 0 0 0;
+
+}
+/*
+body * {
+	zoom: 1;
+}
+*/
+
+.bgcenter {
+	background-position: top center !important;
+	
+}
+
+#wrapper_parent {
+/* 	background: url('images/background-all.jpg') no-repeat center top transparent; */
+/* 	-webkit-background-size: 1520px 4450px; /* image size, NOT container size */
+	background-image: url('images/background-all2.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 1520px 4350px;
+}
+#wrapper {
+	position: relative;
+	height: 4450px;
+	width: 980px;
+	margin: 0 auto !important;
+}
+
+
+#cloudy_body_1 {
+	background: url('images/cloudy_body_1-51.jpg');
+/* 	background: red; */
+	height:813px;
+	width: 980px;
+}
+#cloudy_body_2 {
+	background: url('images/cloudy_body_2.jpg');
+	height:685px;
+	width: 980px;
+}
+#cloudy_body_3 {
+	background: url('images/cloudy_body_3.jpg');
+	height:339px;
+	width: 980px;
+}
+#cloudy_body_4 {
+	background: url('images/cloudy_body_4.jpg');
+	height:1091px;
+	width: 980px;
+}
+#cloudy_body_5 {
+	background: url('images/cloudy_body_5.jpg');
+	height:1423px;
+	width: 980px;
+}
+
+/* DATE-CODE */
+#buy-sell {
+	position: absolute;
+	top:216px;
+	left:469px;
+	width: 471px;
+	height:55px;
+	background: url('images/buy-sell.png');
+	text-indent: -9999px;
+}
+
+/* BOXART & BUY BUTTONS  */
+
+#boxart {
+	cursor: pointer;
+	position: absolute;
+	top: 23px;
+	left: 29px;
+	width: 396px;
+	height: 460px;
+	background: url('images/boxart3.jpg');
+	text-indent: -9999px;
+}
+#boxart:hover {
+/* 	top: 80px; */
+	background-position-y: -460px;
+}
+
+#buy-bluray {
+	cursor: pointer;
+	position: absolute;
+	top: 341px;
+	left: 468px;
+	width: 166px;
+	height:59px;
+	background: url('images/buy-bluray.png');
+	text-indent: -9999px;
+}
+#buy-digital {
+	cursor: pointer;
+	position: absolute;
+	top: 341px;
+	left: 631px;
+	width: 166px;
+	height:59px;
+	background: url('images/buy-digital.png');
+	text-indent: -9999px;
+}
+#buy-dvd {
+	cursor: pointer;
+	position: absolute;
+	top: 341px;
+	left: 792px;
+	width: 166px;
+	height:59px;
+	background: url('images/buy-dvd.png');
+	text-indent: -9999px;
+}
+/* BUY MENUS */
+
+#buy-menu-left,
+#buy-menu-center,
+#buy-menu-right
+{
+	position: absolute;
+	top: 317px;
+	left:-9999px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	z-index: 100;
+}
+#buy-menu-left
+{
+	width: 443px;
+	height: 514px;
+	background-image: url('images/blu-ray-dropdn.png');
+}
+#buy-menu-center
+{
+	width: 424px;
+	height: 654px;
+	background-image: url('images/buydigital-dropdn.png');
+}
+#buy-menu-right
+{
+	width: 172px;
+	height: 514px;
+	background-image: url('images/dvd-dropdn.png');
+}
+.buy-trigger
+{
+	position: absolute;
+	top: 27px;
+	height: 48px;
+	width: 165px;
+	cursor: pointer;
+}
+#buy-menu-left .buy-trigger { left: 0px; }
+#buy-menu-center .buy-trigger { left: 250px; }
+#buy-menu-right .buy-trigger { left: 0px; }
+.buy-close
+{
+	position: absolute;
+	top: 0;
+	width: 43px;
+	height: 27px;
+	/* background: url('images/close.png') no-repeat 0 0 transparent; */
+	text-indent: -9999px;
+	cursor: pointer;
+}
+#buy-menu-left .buy-close, #buy-menu-right .buy-close { left: 110px; }
+#buy-menu-center .buy-close { left: 365px; }
+.buy-close:hover { background-position: 0 -27px; }
+	
+#buy-menu-left ul{
+	position: absolute;
+	top: 75px;
+	left: 18px;
+	width: 134px;
+}
+#buy-menu-right ul
+{
+	position: absolute;
+	top: 75px;
+	left: 15px;
+	width: 134px;
+}
+
+#buy-menu-left a,
+#buy-menu-right a
+{
+	display: block;
+	width: 134px;
+	height: 51px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	text-indent: -9999px;
+	opacity: 0;
+}
+#buy-menu-left a:hover, #buy-menu-right a:hover { background-position: 0 -51px; }
+.buy-btn-walmart a { background-image: url('images/btn_walmart.png'); height: 52px !important; } .buy-btn-walmart a:hover { background-position: 0 -52px !important; }
+.buy-btn-amazon a { background-image: url('images/btn_amazon.png'); }
+.buy-btn-target a { background-image: url('images/btn_target.png'); }
+.buy-btn-toysrus a { background-image: url('images/btn_toysrus.png'); }
+.buy-btn-bestbuy a { background-image: url('images/btn_bestbuy.png'); }
+.buy-btn-kmart a { background-image: url('images/btn_kmart.png'); height: 50px !important; } .buy-btn-kmart a:hover { background-position: 0 -50px !important; }
+.buy-btn-bn a { background-image: url('images/btn_bn.png'); height: 50px !important; } .buy-btn-bn a:hover { background-position: 0 -50px !important; }
+.buy-btn-uv a
+{
+	height: 69px !important;
+	background-image: url('images/btn_uv.png');
+}
+#buy-menu-left .buy-btn-uv a:hover, #buy-menu-right .buy-btn-uv a:hover { background-position: 0 -69px !important; }
+#buy-menu-left p
+{
+	position: absolute;
+	top: 364px;
+	left: 162px;
+	width: 258px;
+	height: 123px;
+	background: transparent url('images/br_feature.png') no-repeat 0 0;
+	text-indent: -9999px;
+}
+#buy-menu-center p
+{
+	position: absolute;
+	top: 370px;
+	left: 26px;
+	width: 237px;
+	height: 257px;
+	background: transparent url('images/uv_feature.png') no-repeat 0 0;
+	text-indent: -9999px;
+}
+#buy-list-top
+{
+	position: absolute;
+	top: 70px;
+	right: 20px;
+	width: 133px;
+}
+#buy-list-top a
+{
+	display: block;
+	width: 133px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	text-indent: -9999px;
+	opacity: 0;
+}
+#buy-list-top .buy-btn-itunes a { background-image: url('images/btn_itunes.png'); height: 51px }
+#buy-list-top .buy-btn-itunes a:hover { background-position: 0 -51px; }
+#buy-list-top .buy-btn-amazon-2 a { background-image: url('images/btn_amazon_iv.png'); height: 49px; }
+#buy-list-top .buy-btn-amazon-2 a:hover { background-position: 0 -49px; }
+#buy-list-top .buy-btn-xbox a { background-image: url('images/btn_xbox.png'); height: 49px; }
+#buy-list-top .buy-btn-xbox a:hover { background-position: 0 -49px; }
+#buy-list-top .buy-btn-sen a { background-image: url('images/btn_sen.png'); height: 49px; }
+#buy-list-top .buy-btn_sen a:hover { background-position: 0 -49px; }
+#buy-list-top .buy-btn-googleplay a { background-image: url('images/btn_gplay.png'); height: 50px; }
+#buy-list-top .buy-btn-googleplay a:hover { background-position: 0 -50px; }
+
+#buy-list-bottom
+{
+	position: absolute;
+	top: 365px;
+	right: 22px;
+	width: 129px;
+}
+#buy-list-bottom a
+{
+	/* position: relative; */
+	display: block;
+	width: 129px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	text-indent: -9999px;
+	opacity: 0;
+}
+#buy-list-bottom .buy-btn-vudu a { background-image: url('images/btn_vudu.png'); height: 50px }
+#buy-list-bottom .buy-btn-vudu a:hover { background-position: 0 -50px; }
+
+#buy-list-bottom .buy-btn-bbcn a { background-image: url('images/btn_bbcn.png'); height: 49px }
+#buy-list-bottom .buy-btn-bbcn a:hover { background-position: 0 -49px; }
+
+#buy-list-bottom .buy-btn-targ a { background-image: url('images/btn_bbtt.png'); height: 49px;}
+#buy-list-bottom .buy-btn-targ a:hover { background-position: 0px -49px; }
+
+#buy-list-bottom .buy-btn-sps a { background-image: url('images/btn_sps.png'); height: 51px }
+#buy-list-bottom .buy-btn-sps a:hover { background-position: 0 -51px; }
+
+#buy-list-bottom .buy-btn-uv-2 a { background-image: url('images/btn_uv_2.png'); height: 72px }
+#buy-list-bottom .buy-btn-uv-2 a:hover { background-position: 0 -72px; }
+
+/* MAIN VIDEO & PACKAGING DETAIL */
+
+#celebrate {
+	cursor: pointer;
+	position: absolute;
+	top: 488px;
+	left: 619px;
+	width: 205px;
+	height:208px;
+	background: url('images/celebrate.png');
+	text-indent: -9999px;
+}
+#celebrate:hover {
+	background-position-y: -208px;
+}
+
+#characters {
+	position:absolute;
+	top:361px;
+	left: 28px;
+	background: url('images/characters2.png');
+	z-index: 2;
+	height: 416px;
+	width: 534px;
+}
+
+#video {
+	position: absolute;
+	top:658px;
+	left:80px;
+/* 	background: url('images/video1.jpg'); */
+	height:410px;
+	width: 840px;
+	z-index: 3;
+}
+#play {
+	cursor: pointer;
+	position: absolute;
+	top:800px;
+	left:430px;
+	background: url('images/play.png');
+	height:137px;
+	width: 137px;
+	z-index: 3;
+}
+#play:hover {
+	background-position-y: -138px;
+}
+#watch-trailer {
+	cursor: pointer;
+	position: absolute;
+	top:1055px;
+	left:99px;
+	background: url('images/watch-trailer.png');
+	height:38px;
+	width: 394px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#watch-trailer:hover {
+	background-position-y: -38px;
+}
+#mini-movie {
+	cursor: pointer;
+	position: absolute;
+	top:1055px;
+	left:508px;
+	background: url('images/mini-movie.png');
+	height:38px;
+	width: 394px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#mini-movie:hover {
+	background-position-y: -38px;
+}
+#combo-pack {
+	cursor: pointer;
+	position: absolute;
+	top:1112px;
+	left:136px;
+/* 	background: url('images/combo-pack.png'); */
+	height:293px;
+	width: 400px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+
+#special-barry {
+	cursor: pointer;
+	position: absolute;
+	top:1119px;
+	left:534px;
+/* 	background: url('images/special-barry.png'); */
+	height:376px;
+	width: 420px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+
+/* GAMES + ACTIVITIES */
+
+#foodimal {
+	cursor: pointer;
+	position: absolute;
+	top:1558px;
+	left:100px;
+	background: url('images/foodimal.png');
+	height:202px;
+	width: 260px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#foodimal:hover {
+	background-position-y: -202px;
+}
+#send-ecards {
+	cursor: pointer;
+	position: absolute;
+	top:1558px;
+	left:372px;
+	background: url('images/send-ecards.png');
+	height:202px;
+	width: 260px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#send-ecards:hover {
+	background-position-y: -202px;
+}
+#more-games {
+	cursor: pointer;
+	position: absolute;
+	top:1558px;
+	left:643px;
+	background: url('images/more-games.png');
+	height:202px;
+	width: 260px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#more-games:hover {
+	background-position-y: -202px;
+}
+#printable-activity {
+	cursor: pointer;
+	position: absolute;
+	top:1770px;
+	left:100px;
+	background: url('images/printable-activity.png');
+	height:38px;
+	width: 804px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#printable-activity:hover {
+	background-position-y: -38px;
+}
+
+/* MOBILE FUN */
+#dlapp-itunes {
+	cursor: pointer;
+	position: absolute;
+	top:2245px;
+	left:120px;
+	background: url('images/dlapp-itunes.png');
+	height:41px;
+	width: 235px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#dlapp-itunes:hover {
+	background-position: 1px 1px;
+}
+#dlapp-gplay {
+	cursor: pointer;
+	position: absolute;
+	top:2294px;
+	left:120px;
+	background: url('images/dlapp-gplay.png');
+	height:41px;
+	width: 235px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#dlapp-gplay:hover {
+	background-position: 1px 1px;
+}
+#mf-video-wrap {
+	cursor: pointer;
+	position: absolute;
+	top:2089px;
+	left:364px;
+	height:241px;
+	width: 525px;
+	z-index: 4;	
+}
+#mf-video {
+	text-indent: -9999px;
+	background: url('images/mf-video.png');
+/* 	background: red; */
+	height:241px;
+	width: 525px;
+}
+#mf-video-wrap:hover #mf-video {
+	background-position-y: -271px;
+/* 	background: red; */
+}
+
+#watch-foodfunimal {
+	cursor: pointer;
+	position: absolute;
+	top: 201px;
+	left: 18px;
+/*
+	top:2291px;
+	left:382px;
+*/
+	background: url('images/watch-foodfunimal.png');
+	height:34px;
+	width: 489px;
+	text-indent: -9999px;
+	z-index: 5;
+}
+#mf-video-wrap:hover #watch-foodfunimal {
+	background-position-y: -34px;
+}
+#foodimal-game {
+	cursor: pointer;
+	position: absolute;
+	top:2386px;
+	left:82px;
+/* 	background: url('images/foodimal-game.png'); */
+	height:192px;
+	width: 423px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#mf-itunes {
+	cursor: pointer;
+	position: absolute;
+	top:2562px;
+	left:86px;
+	background: url('images/mf-itunes.png');
+	height:41px;
+	width: 202px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#mf-itunes:hover {
+	background-position: 1px 1px;
+}
+#mf-gplay {
+	cursor: pointer;
+	position: absolute;
+	top:2562px;
+	left:291px;
+	background: url('images/mf-gplay.png');
+	height:41px;
+	width: 190px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#mf-gplay:hover {
+	background-position: 1px 1px;
+}
+#play-cloudymeatballs {
+	cursor: pointer;
+	position: absolute;
+	top:2386px;
+	left:494px;
+/* 	background: url('images/play-cloudymeatballs.png'); */
+	height:192px;
+	width: 423px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#cm-itunes {
+	cursor: pointer;
+	position: absolute;
+	top:2562px;
+	left:500px;
+	background: url('images/cm-itunes.png');
+	height:41px;
+	width: 202px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#cm-itunes:hover {
+	background-position: 1px 1px;
+}
+#cm-gplay {
+	cursor: pointer;
+	position: absolute;
+	top:2562px;
+	left:706px;
+	background: url('images/mf-gplay.png');
+	height:41px;
+	width: 190px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#cm-gplay:hover {
+	background-position: 1px 1px;
+}
+#check-partners {
+	cursor: pointer;
+	position: absolute;
+	top:2816px;
+	left:250px;
+	background: url('images/check-partners.png');
+	height:92px;
+	width: 513px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#check-partners:hover {
+	background-position-y: -92px;
+}
+
+/* OTHER DELICIOUSLY FUN (DVDS) */
+#cloudy1-boxart {
+	cursor: pointer;
+	position: absolute;
+	top:3327px;
+	left:74px;
+	background: url('images/cloudy1-boxart.png');
+	height:266px;
+	width: 199px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#smurfs2-boxart {
+	cursor: pointer;
+	position: absolute;
+	top:3327px;
+	left:296px;
+	background: url('images/smurfs2-boxart.png');
+	height:245px;
+	width: 209px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#smurfyhollow-boxart {
+	cursor: pointer;
+	position: absolute;
+	top:3327px;
+	left:525px;
+	background: url('images/smurfyhollow-boxart.png');
+	height:243px;
+	width: 184px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#hotelt-boxart {
+	cursor: pointer;
+	position: absolute;
+	top:3327px;
+	left:722px;
+	background: url('images/hotelt-boxart.png');
+	height:245px;
+	width: 199px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+
+.amazon {
+	cursor: pointer;
+	position: absolute;
+	top:3571px;
+	left:105px;
+	background: url('images/amazon.png');
+	height:45px;
+	width: 113px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+.amazon:hover {
+	background-position: 1px 1px;
+}
+.itunes {
+	cursor: pointer;
+	position: absolute;
+	top:3615px;
+	left:105px;
+	background: url('images/itunes.png');
+	height:45px;
+	width: 113px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+.itunes:hover {
+	background-position: 1px 1px;
+}
+.pg-rating {
+	cursor: pointer;
+	position: absolute;
+	top:3571px;
+	left:225px;
+	background: url('images/pg-rating.png');
+	height:16px;
+	width: 30px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+/* THEATRE SITE INFO */
+#learn-more {
+	cursor: pointer;
+	position: absolute;
+	top:3794px;
+	left:463px;
+	background: url('images/learn-more.png');
+	height:56px;
+	width: 169px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#learn-more:hover {
+	background-position-y: -56px;
+}
+#visit-theatrical {
+	cursor: pointer;
+	position: absolute;
+	top:3881px;
+	left:259px;
+	background: url('images/visit-theatrical.png');
+	height:92px;
+	width: 513px;
+	text-indent: -9999px;
+	z-index: 4;
+}
+#visit-theatrical:hover {
+	background-position-y: -87px;
+}
+
+#sony_legal {
+	width: 980px;
+	position: absolute;
+	top: 4140px;
+	color: #ccc;
+	text-align: center;
+	line-height: 1.5;
+}
+#sony_legal a {
+	color: #ccc;
+/* 	text-decoration: none; */
+}
+
+/* ========================================
+EFFECTS 
+===========================================*/
+
+#cloudy_overlay
+{
+	display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+	background-color: #000;
+	opacity: 0.6;
+	z-index: 80;
+	filter: alpha(opacity=80);
+	zoom: 1;
+}
+#confetti {
+	position: fixed;
+	width: 100%;
+	top: 0%;
+	z-index: 10;
+}
